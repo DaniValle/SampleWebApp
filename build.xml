@@ -27,7 +27,7 @@
     </checkstyle>
   </target>
 
-  <target name="junit">
+  <target name="junit" depends="compile">
     <junit printsummary="yes" haltonfailure="yes">
     <classpath>
         <pathelement location="build/classes"/>
@@ -36,7 +36,7 @@
     </classpath>
 
     <test name="junit.TestCalculator" haltonfailure="no" outfile="TestCalculator_JUnitResult">
-        <formatter type="plain"/>
+        <formatter type="xml"/>
     </test>
 </junit>
   </target>
